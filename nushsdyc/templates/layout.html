@@ -15,7 +15,8 @@
 
   {% block header %}{% endblock %}
 
-  <nav class="white" id="top-nav" role="navigation">
+  <div id="top-nav" class="navbar-fixed">
+  <nav class="white" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="/" class="brand-logo">SDYC</a>
       {% set navigation_bar = [
@@ -43,6 +44,7 @@
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
+  </div>
 
   {% block body %}{% endblock %}
 
