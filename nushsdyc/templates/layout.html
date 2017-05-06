@@ -17,13 +17,28 @@
 
   <nav class="white" id="top-nav" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <a id="logo-container" href="/" class="brand-logo">SDYC</a>
+      {% set navigation_bar = [
+          ('/about', 'about', 'About'),
+          ('/committees', 'committees', 'Committees'),
+          ('/documents', 'documents', 'Documents'),
+          ('/contact', 'contact', 'Contact')
+      ] -%}
+      {% set active_page = active_page|default('index') -%}
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
+        {% for href, id, caption in navigation_bar %}
+          <li{% if id == active_page %} class="active"{% endif %}>
+            <a href="{{ href|e }}">{{ caption|e }}</a>
+          </li>
+        {% endfor %}
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
+        {% for href, id, caption in navigation_bar %}
+          <li{% if id == active_page %} class="active"{% endif %}>
+            <a href="{{ href|e }}">{{ caption|e }}</a>
+          </li>
+        {% endfor %}
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -31,33 +46,31 @@
 
   {% block body %}{% endblock %}
 
-  <footer class="page-footer teal">
+  <footer class="page-footer brown">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+          <h5 class="white-text">Bio</h5>
+          <p class="grey-text text-lighten-4">We are a group of passionate MUNers from NUS High School. Our goal is to organize a fun and exciting MUN for all students.</p>
 
 
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
+          <h5 class="white-text">Conference</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="committees">Committees</a></li>
+            <li><a class="white-text" href="documents">Documents</a></li>
           </ul>
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
+          <h5 class="white-text">About</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+          <li><a class="white-text" href="https://www.facebook.com/NUSHSDYC/">Facebook</a></li>
+            <li><a class="white-text" href="about">About Us</a></li>
+            <li><a class="white-text" href="contact">Contact</a></li>
           </ul>
         </div>
+        
       </div>
     </div>
     <div class="footer-copyright">
@@ -72,6 +85,7 @@
   <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.2.4.js') }}"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.js') }}"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='js/layout.js') }}"></script>
+  {% block script %}{% endblock %}
 
   </body>
 </html>

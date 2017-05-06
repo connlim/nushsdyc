@@ -30,7 +30,12 @@
 }
 
 .text-shadow {
-  text-shadow: 0 0 0.15em rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 0.15em rgba(0, 0, 0, 0.4);
+}
+
+.info-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 nav ul a,
@@ -45,6 +50,10 @@ p {
 .button-collapse {
   color: #26a69a;
 }
+
+/*.parallax img {
+  filter: blur(2px);
+}*/
 
 .parallax-container {
   min-height: 380px;
