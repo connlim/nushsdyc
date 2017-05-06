@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% set active_page = "about" %}
+{% block header_title %}About{% endblock %}
+
+
+{% block body %}
+
+<div class="container info-container">
+<div class="section">
+
+  <div class="row">
+    <div class="col s12 center">
+      <h3><i class="mdi-content-send brown-text"></i></h3>
+      <div class="section">
+      <h4>About Us</h4>
+      <p class="left-align light">
+        The Sustainable Development Youth Convention is a student-initiated, student-run Model-UN (MUN) convention for Secondary students, focusing on the social, economic, political and environmental issues revolving around the central theme of sustainable development.
+        <br>
+        <br>
+        Organised by students of the NUS High School of Math and Science, this annual “by youths, for youths” convention offers a platform to fellow students to raise their concerns and share their insights, as well as for fostering cooperation among teams in reaching a resolution on these global issues; amalgamating the humanities with our school’s expertise in the mathematics and sciences to provide fresh perspectives on sustainable development.
+        <br>
+        <br>
+        We believe that SDYC is just the beginning of a great journey. It is our hope that the students who take part in SDYC will take this experience as a first step towards a life committed to changing the world for the better, and towards a life dedicated to securing our future.
+      </p>
+      </div>
+      <div class="section">
+      <h5>What is sustainable development?</h5>
+      <p class="left-align light">
+        “Sustainable development” was a term first used in the 1983 Brundtland Commission, referring to development that “meets the needs of the present without compromising the ability of future generations to meet their own needs”. Sustainable development has since emerged at the forefront of global priorities and concerns, with global warming and climate change placing pressure on politicians to take firm action.
+        <br>
+        <br>
+        Sustainable development, contrary to popular belief, does not only include green topics within its purview; rather, the topic spans the broad disciplines of economics, environmental science, and political science, among other fields, creating a SPECTRA (social, political, environmental/economic, cultural, technological, racial, ancillaries) of niche areas that one can focus their attentions upon. Hence, the SDYC will allow students a novel opportunity to be at the crossroads of scientific developments and public policy, engaging in holistic discussions spanning across science and the humanities.
+      </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/committees.js') }}"></script>
+{% endblock %}

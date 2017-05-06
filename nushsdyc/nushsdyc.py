@@ -8,6 +8,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 @app.route('/committees')
 def committees():
     return render_template('committees.html')
@@ -15,3 +19,7 @@ def committees():
 @app.route('/documents')
 def documents():
     return render_template('documents.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
