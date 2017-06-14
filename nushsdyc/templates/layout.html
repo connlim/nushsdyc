@@ -18,12 +18,16 @@
   <div id="top-nav" class="navbar-fixed">
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="/" class="brand-logo">SDYC</a>
+      <a id="logo-container" href="/" class="brand-logo">
+        <!-- <img src="{{ url_for('static', filename='img/SDYC_Logo_2017.png') }}" height="64px" /> -->
+        SDYC
+      </a>
       {% set navigation_bar = [
-          ('/about', 'about', 'About'),
-          ('/committees', 'committees', 'Committees'),
-          ('/documents', 'documents', 'Documents'),
-          ('/contact', 'contact', 'Contact')
+          ('/about.html', 'about', 'About'),
+          ('/committees.html', 'committees', 'Committees'),
+          ('/documents.html', 'documents', 'Documents'),
+          ('/registration.html', 'registration', 'Registration'),
+          ('/contact.html', 'contact', 'Contact')
       ] -%}
       {% set active_page = active_page|default('index') -%}
       <ul class="right hide-on-med-and-down">
@@ -51,28 +55,23 @@
   <footer class="page-footer brown">
     <div class="container">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Bio</h5>
-          <p class="grey-text text-lighten-4">We are a group of passionate MUNers from NUS High School. Our goal is to organize a fun and exciting MUN for all students.</p>
-
-
-        </div>
         <div class="col l3 s12">
           <h5 class="white-text">Conference</h5>
           <ul>
-            <li><a class="white-text" href="committees">Committees</a></li>
-            <li><a class="white-text" href="documents">Documents</a></li>
+            <li><a class="white-text" href="committees.html">Committees</a></li>
+            <li><a class="white-text" href="documents.html">Documents</a></li>
+            <li><a class="white-text" href="registration.html">Registration</a></li>
           </ul>
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">About</h5>
           <ul>
           <li><a class="white-text" href="https://www.facebook.com/NUSHSDYC/">Facebook</a></li>
-            <li><a class="white-text" href="about">About Us</a></li>
-            <li><a class="white-text" href="contact">Contact</a></li>
+            <li><a class="white-text" href="about.html">About Us</a></li>
+            <li><a class="white-text" href="contact.html">Contact</a></li>
           </ul>
         </div>
-        
+
       </div>
     </div>
     <div class="footer-copyright">

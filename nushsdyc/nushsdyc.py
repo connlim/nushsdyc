@@ -23,3 +23,7 @@ def documents():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+@app.route('/registration')
+def registration():
+    return render_template('registration.html')

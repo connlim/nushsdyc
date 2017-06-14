@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% set active_page = "registration" %}
+{% block header_title %}Registration{% endblock %}
+
+
+{% block body %}
+<div class="container info-container">
+<div class="section">
+
+  <div class="row">
+    <div class="col s12 center">
+      <h3><i class="mdi-content-send brown-text"></i></h3>
+      <div class="section">
+        <h4>Timeline</h4>
+        <p class="light">
+          <table class="centered striped">
+            <tbody>
+              <tr>
+                <td>Registration Opens</td>
+                <td>23 May 2017</td>
+              </tr>
+              <tr>
+                <td>Registration Closes</td>
+                <td>14 July 2017</td>
+              </tr>
+              <tr>
+                <td>Deadline for payment</td>
+                <td>1 August 2017</td>
+              </tr>
+            </tbody>
+          </table>
+        </p>
+      </div>
+
+      <div class="section">
+        <h4>Registration Details</h4>
+        <p class="light">
+          <a class="bold" href="{{ url_for('static', filename='files/Registration Form 2017.xlsx') }}">Download the Registration Form</a>
+          <br />
+          Please send all registration forms to <span class="bold">sdyc@nushigh.edu.sg</span>
+          <br /><br />
+          Participants may register with the school through a teacher-in-charge and have the registration sent in as a group by filling up the registration form which may be downloaded in this website or sent via email. Teachers-in-charge will need to complete the Excel sheet with the details of your student participants. Each school is strongly encouraged to send up to 30 student participants from Secondary 3, 4, JC 1 or JC 2 (or equivalent) academic years.
+          <br /><br />
+          The payments for school registrations are to be made by cheque payable to 'NUS High School'. The registration fee per head is $85, covering materials and meals (including lunch and tea reception) for the duration of the convention. Places and allocations are subject to  availability. Instructions for payment will be sent out via email once  registration is confirmed.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+{% endblock %}

@@ -5,6 +5,10 @@
  *
  * Made By MaterializeCSS.com
  */
+.bold {
+  font-weight: bold;
+}
+
 #sidenav-overlay {
   z-index: 996;
 }
@@ -48,6 +52,8 @@ nav .brand-logo {
 
 p {
   line-height: 2rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .button-collapse {
