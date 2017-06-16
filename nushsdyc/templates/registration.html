@@ -2,6 +2,9 @@
 {% set active_page = "registration" %}
 {% block header_title %}Registration{% endblock %}
 
+{% block head %}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
 
 {% block body %}
 <div class="container info-container">
@@ -35,7 +38,10 @@
       <div class="section">
         <h4>Registration Details</h4>
         <p class="light">
-          <a class="bold" href="{{ url_for('static', filename='files/Registration Form 2017.xlsx') }}">Download the Registration Form</a>
+          <a class="bold" href="{{ url_for('static', filename='files/Registration Form 2017.xlsx') }}">
+            <i class="material-icons" style="display: inline-flex; vertical-align: middle;">file_download</i>
+            Registration Form
+          </a>
           <br />
           Please send all registration forms to <span class="bold">sdyc@nushigh.edu.sg</span>
           <br /><br />

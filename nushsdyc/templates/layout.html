@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.css') }}"  media="screen,projection"/>
   <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"  media="screen,projection"/>
+  {% block head %}{% endblock %}
 </head>
 <body>
 
@@ -19,8 +20,7 @@
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="/" class="brand-logo">
-        <!-- <img src="{{ url_for('static', filename='img/SDYC_Logo_2017.png') }}" height="64px" /> -->
-        SDYC
+        <img src="{{ url_for('static', filename='img/SDYC_Logo_2017_Transparent.png') }}" height="64px" />
       </a>
       {% set navigation_bar = [
           ('/about.html', 'about', 'About'),
